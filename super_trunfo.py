@@ -1,22 +1,76 @@
 print(">>> JOGO SUPER TRUNFO <<<")
 
-print("\nCADASTRO DE CARTAS:\n")
+print("REGRAS:\n")
+print("- Cada país será dividido em 8 estados (identificadas pelas letras A a H).")
+print("- Cada estado terá 4 cidades (numerados de 1 a 4).")
+print("- A combinação de letras e números formarão o código da carta.")
+print("EXEMPLO: A01; A02; B01; B02...\n")
 
-estado = str(input("Estado (A a H): ")).strip().upper()
-cidade = int(input("Código da carta (1 - 4): "))
-area = float(input("Área da cidade (Km²): "))
-populacao = int(input("População: "))
-pib = float(input("PIB: R$"))
-pontos_turisticos = int(input("Pontos Turisticos: "))
+# DADOS DA CARTA 1:
 
-densidade_populacional = populacao / area
-pib_per_capita = pib / populacao
+print("\nCADASTRO DA CARTA 1:\n")
 
-print("\nDADOS DA CARTA\n")
-print(f"CÓDIGO DA CARTA: {estado}0{cidade}")
-print(f"Área: {area}Km²")
-print(f"POPULAÇÃO: {populacao}")
-print(f"PIB: R${pib:,.2f} M")
-print(f"PONTOS TURISTICOS: {pontos_turisticos}")
-print(f"Densidade Populacional: {densidade_populacional:.2f} hab/Km²")
-print(f"PIB per Capita: R${pib_per_capita:,.2f}")
+estado_1 = str(input("Estado (A a H): ")).strip().upper()
+cidade_1 = int(input("Código da carta (1 - 4): "))
+nome_1 = str(input("Nome da Cidade: ")).strip().upper()
+area_1 = float(input("Área da cidade (Km²): "))
+populacao_1 = int(input("População: "))
+pib_1 = float(input("PIB: R$"))
+pontos_turisticos_1 = int(input("Pontos Turisticos: "))
+
+densidade_populacional_1 = populacao_1 / area_1
+pib_per_capita_1 = pib_1 * 1000000000 / populacao_1
+
+super_poder_1 = populacao_1 + area_1 + (pib_1 * 1000000000) + pontos_turisticos_1 + pib_per_capita_1 + (1 / densidade_populacional_1)
+
+# DADOS DA CARTA 2:
+
+estado_2 = str(input("Estado (A a H): ")).strip().upper()
+cidade_2 = int(input("Código da carta (1 - 4): "))
+nome_2 = str(input("Nome da Cidade: ")).strip().upper()
+area_2 = float(input("Área da cidade (Km²): "))
+populacao_2 = int(input("População: "))
+pib_2 = float(input("PIB: R$"))
+pontos_turisticos_2 = int(input("Pontos Turisticos: "))
+
+densidade_populacional_2 = populacao_2 / area_2
+pib_per_capita_2 = pib_2 * 1000000000 / populacao_2
+
+super_poder_2 = populacao_2 + area_2 + (pib_2 * 1000000000) + pontos_turisticos_2 + pib_per_capita_2 + (1 / densidade_populacional_2)
+
+# EXIBIÇAO DA CARTA 1:
+
+print("\nDADOS DA CARTA 1\n")
+print(f"CÓDIGO DA CARTA: {estado_1}0{cidade_1}")
+print(f"Nome da Cidade: {nome_1}")
+print(f"Área: {area_1}Km²")
+print(f"População: {populacao_1}")
+print(f"PIB: R${pib_1:,.2f} BILHÕES")
+print(f"Pontos Turisticos: {pontos_turisticos_1}")
+print(f"Densidade Populacional: {densidade_populacional_1:.2f} hab/Km²")
+print(f"PIB per Capita: R${pib_per_capita_1:,.2f}")
+print(f"Super Poder: {super_poder_1:.2f}")
+
+# EXIBIÇAO DA CARTA 2:
+
+print("\nDADOS DA CARTA 2\n")
+print(f"CÓDIGO DA CARTA: {estado_2}0{cidade_2}")
+print(f"Nome da Cidade: {nome_2}")
+print(f"Área: {area_2}Km²")
+print(f"População: {populacao_2}")
+print(f"PIB: R${pib_2:,.2f} BILHÕES")
+print(f"Pontos Turisticos: {pontos_turisticos_2}")
+print(f"Densidade Populacional: {densidade_populacional_2:.2f} hab/Km²")
+print(f"PIB per Capita: R${pib_per_capita_2:,.2f}")
+print(f"Super Poder: {super_poder_2:.2f}")
+
+# COMPARAÇÃO DAS CARTAS:
+
+print("\nCOMPARAÇÃO DE CARTAS:\n");
+print(f"População: Carta {1 if populacao_1 > populacao_2 else 2} venceu")
+print(f"Área: Carta {1 if area_1 > area_2 else 2} venceu")
+print(f"PIB: Carta {1 if pib_1 > pib_2 else 2} venceu")
+print(f"Pontos Turisticos: Carta {1 if pontos_turisticos_1 > pontos_turisticos_2 else 2} venceu")
+print(f"Densidade Populacional: Carta {1 if densidade_populacional_1 < densidade_populacional_2 else 2} venceu")
+print(f"PIB per capita: Carta {1 if pib_per_capita_1 > pib_per_capita_2 else 2} venceu")
+print(f"Super Poder: Carta {1 if super_poder_1 > super_poder_2 else 2} venceu")
