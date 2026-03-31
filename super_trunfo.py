@@ -19,11 +19,13 @@ pib_1 = float(input("PIB: R$"))
 pontos_turisticos_1 = int(input("Pontos Turisticos: "))
 
 densidade_populacional_1 = populacao_1 / area_1
-pib_per_capita_1 = pib_1 * 1000000000 / populacao_1
+pib_per_capita_1 = pib_1 / populacao_1
 
-super_poder_1 = populacao_1 + area_1 + (pib_1 * 1000000000) + pontos_turisticos_1 + pib_per_capita_1 + (1 / densidade_populacional_1)
+super_poder_1 = populacao_1 + area_1 + pib_1 + pontos_turisticos_1 + pib_per_capita_1 + (1 / densidade_populacional_1)
 
 # DADOS DA CARTA 2:
+
+print("\nCADASTRO DA CARTA 2:\n")
 
 estado_2 = str(input("Estado (A a H): ")).strip().upper()
 cidade_2 = int(input("Código da carta (1 - 4): "))
@@ -34,9 +36,9 @@ pib_2 = float(input("PIB: R$"))
 pontos_turisticos_2 = int(input("Pontos Turisticos: "))
 
 densidade_populacional_2 = populacao_2 / area_2
-pib_per_capita_2 = pib_2 * 1000000000 / populacao_2
+pib_per_capita_2 = pib_2 / populacao_2
 
-super_poder_2 = populacao_2 + area_2 + (pib_2 * 1000000000) + pontos_turisticos_2 + pib_per_capita_2 + (1 / densidade_populacional_2)
+super_poder_2 = populacao_2 + area_2 + pib_2 + pontos_turisticos_2 + pib_per_capita_2 + (1 / densidade_populacional_2)
 
 # EXIBIÇAO DA CARTA 1:
 
